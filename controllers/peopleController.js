@@ -22,6 +22,7 @@ router.delete("/:id", async (req, res) => {
 
 // update
 router.put("/:id", async (req, res) => {
+  console.log(req.body, req.params.id);
   try {
     res.json(
       await People.findByIdAndUpdate(req.params.id, req.body, { new: true })
