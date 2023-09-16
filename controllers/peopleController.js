@@ -33,6 +33,7 @@ router.put("/:id", async (req, res) => {
 
 // create
 router.post("/", async (req, res) => {
+  console.log("req.body:", req.body);
   try {
     res.json(await People.create(req.body));
   } catch (error) {

@@ -1,4 +1,5 @@
 const mongoose = require("../db/connection");
+
 const PeopleSchema = new mongoose.Schema({
   name: String,
   image: String,

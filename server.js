@@ -7,6 +7,9 @@ const peopleController = require("./controllers/peopleController");
 const morgan = require("morgan");
 app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("hello world");
